@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+
+
+    <div class="ui middle aligned center aligned container segment">
+        <div class="ui huge header">Post A New Event</div>
+    <form class="ui form" action="/blogs" method="post">
+        <div class="field">
+         <label>Name of the event:</label>
+         <input type="text" name="blog[name]" placeholder="Name Of the film">
+        </div>
+    <div class="ui labeled field">
+      <div class="ui label">
+        http://
+      </div>
+      <label>Image:</label>
+      <input type="text" name="blog[image]" placeholder="image">
+    </div>
+    
+    <div class="field">
+       <label>Event details</label>
+      <textarea name="blog[body]"></textarea>
+    </div>
+    <div class="field">
+      <input type="submit" class="ui button">
+    </div>
+    </form>
+    </div>
+<% include ./partials/footer %>

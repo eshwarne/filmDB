@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+<div class="ui container segment">
+    <div class="ui segment">
+        <h2>
+            Event Name: <%= blog.name %>
+        </h2>
+    </div>
+    <div class="ui raised segment">
+        <img class="ui medium rounded image" src="<%=blog.image%>">
+    </div>
+    <div class="ui raised segment">
+        <p><%=blog.body%></p>
+    </div>
+    <div>
+        <span>Date created : <%=blog.date%></span>
+    </div>
+    
+        <%blog.comment.forEach(function(comments){%>
+        <div class="ui raised segment">
+           <p>Name :<strong><%= comments.author %></strong> </p>
+            <p>comment on event:</strong> <%= comments.text %></strong> </p>
+        </div>
+        <% }) %>
+        
+    
+    <div class="ui field">
+        <a class="ui button" href="/blogs/<%=blog._id%>/comments/new">COMMENT</a>
+    </div>
+</div>
+<% include ./partials/footer %>
